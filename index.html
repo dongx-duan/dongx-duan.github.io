@@ -5,18 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+  <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
     crossorigin="anonymous">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+  <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
     integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
     crossorigin="anonymous">
 
   <style>
     body {
       font-size: 16px;
-      color: #666;
+      color: #333;
     }
     a {
       cursor: pointer;
@@ -29,9 +31,11 @@
       
     }
     .sidebar div {
-      margin-top: 8px;
+      margin-top: 6px;
     }
-
+    .sidebar .section{
+      margin-top: 12px;
+    }
     .main{
 
     }
@@ -55,8 +59,8 @@
     <div class="row">
       <div class="col-md-9 col-md-offset-3">
         <div class="page-header">
-        <h1 style="color:#333">Learning Deep Structures <br/>
-          <small>a note on deep learning and probabilistic graphic models</small>
+        <h1 >Learning Deep Structures <br/>
+          <small style="color:#666">a note on deep learning and probabilistic graphic models</small>
         </h1>
       </div>
       </div>
@@ -65,13 +69,20 @@
     <div class="row">
       <div class="col-md-3 sidebar">
         <div><a style="font-size: 1.5em;"> Dongxu Duan </a> </div>
-        <div> Machine Learning, Deep Learning, Data Science, Visualization </div>
+        <div> Machine Learning, Deep Learning, Visualization </div>
+        <br>
         <div> <a href="#intro"> Why we are here? </a> </div>
-        <div> <a href="#slp"> Sequence Labeling Problem</a></div>
-        <div> <a href="#rnn"> Recurrent Neural Network</a></div>
-        <div> <a href="#crf"> Conditional Random Field</a></div>
+        <div class="section"> Part 1 </div>
+        <div> <a href="#slp"> Sequence Labeling Problem </a></div>
+        <div> <a href="#rnn"> Recurrent Neural Network </a></div>
+        <div> <a href="#crf"> Conditional Random Field </a></div>
         <div> <a href="#ner"> Application: Name Entity Recognition </a> </div>
+        <div class="section"> Part 2 </div>
+        <div> <a href="#vae"> Variational Auto-Encoder </a></div>
+        <div> <a href="#vrnn"> Variational RNN </a></div>
+        <br>
         <div> <a href="#ref"> Reference</a></div>
+        <div> <a href="#app"> Appendix </a></div>
       </div>
 
       <div class="col-md-9 main">
@@ -111,33 +122,60 @@
 
 
         <div class="row">
+          <div> <a id="#vae"> </a><em> Variational Auto-Encoder </em></div>
+        </div>
+        <hr>
+
+
+        <div class="row">
+          <div> <a id="#vrnn"> </a><em> Variational Recurrent Neural Network </em></div>
+        </div>
+        <hr>
+
+
+        <div class="row">
           <div> <a id="#ref"> </a><em> Reference </em></div>
           <div>
             <ul>
-              <li>A great tutorial on LSTM, by r2rt <a href="http://r2rt.com/written-memories-understanding-deriving-and-extending-the-lstm.html">
+              <li>A great tutorial on LSTM, by r2rt 
+                  <a href="http://r2rt.com/written-memories-understanding-deriving-and-extending-the-lstm.html">
                   Written Memories: Understanding, Deriving and Extending the LSTM </a> </li>
 
-              <li>Another tutorial on LSTM with great charts, by colah<a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">
+              <li>Another tutorial on LSTM with great charts, by colah
+                  <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">
                   Understanding LSTM Networks</a> </li>
 
-              <li>Several amazing applications of RNN, by Karpathy <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">
+              <li>Several amazing applications of RNN, by Karpathy 
+                  <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">
                   The Unreasonable Effectiveness of Recurrent Neural Networks</a> </li>
 
               <li>Clear math of CRF, by Michael Collins <a href="http://www.cs.columbia.edu/~mcollins/crf.pdf">
                   Log-Linear Models, MEMMs, and CRFs</a></li>
 
-              <li>Implemtation of Bi-LSTM and CRF, by me. I hope it would help to understand what i have written.
+              <li>Implementation of Bi-LSTM + CRF model, by me. 
+                  I hope it would help to understand what i have written.
                   <a href="https://github.com/dongx-duan/crf"> Code</a></li>
 
             </ul>
           </div>
         </div>
+        <hr>
+
+
+        <div class="row">
+          <div> <a id="#vrnn"> </a><em> Variational Recurrent Neural Network </em></div>
+        </div>
+        <hr>
+
       </div>
     </div>
   </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
     crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
 </body>
 </html>

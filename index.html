@@ -26,7 +26,6 @@
     a:link {
       color: #4896DF;
     }
-
     .sidebar {
       
     }
@@ -37,12 +36,14 @@
       margin-top: 12px;
     }
     .main{
-
     }
     .main em{
       font-weight: bold;
     }
     .main li{
+      margin-top: 4px;
+    }
+    .main p{
       margin-top: 4px;
     }
   </style>
@@ -66,6 +67,7 @@
       </div>
     </div>
     
+
     <div class="row">
       <div class="col-md-3 sidebar">
         <div><a style="font-size: 1.5em;"> Dongxu Duan </a> </div>
@@ -85,10 +87,20 @@
         <div> <a href="#apnd"> Appendix </a></div>
       </div>
 
+
       <div class="col-md-9 main">
         <div class="row">
           <div> <a id="#intro"></a><em>Why we are here?</em></div>
           <div>
+            <p>
+              The rapid progress in Machine Learning and Artificial Intelligence in recent years is largely due to the renaissance of the artificial neural network, specifically, the deep convolution neural network(CNN) and deep recurrent neural network(RNN). In generally, it's called Deep Learning. The effectiveness of Deep Learning have been proved in many applications, such as image recognition, image segmentation, machine translation, conversation generation, and playing PC games etc. In some of them, machine has already beaten human. However, the reason of such powerful capability Deep Learning is still unclear. There are two mainstream views: the first, each layer of the neural network is a non-linear function, and stack of numbers of such layers could approximates any complex function. The second, Deep Learning is good at constructing distributed, sparse and abstract features which are critical in machine learning tasks. Despite of such perplexities, CNNs and RNNs are easy to train by back propagation method(BP), which aids their popularity.
+            </p>
+            <p>
+              Probabilistic graphic models (a huge famaly including Hidden Molkev Model, Condition Random Field, Restricted Bolzmann Machine etc) are also hot topics in machine learning. Koller and Friedman wrote a 1200 pages book on this topic. Comparing to Deep Learning, probabilistic graphic models are better in defining structures and relationships but dificult in training and inference. Infusing probabilistic graphic models into Deep Learning 
+            </p>
+            <p>
+              In the first part of this tutorial, we will examinate the details of recurrent neural networks and conditional random field, and apply them in solving the sequence labeling problem. In the second part, we will go through some advanced topics of combining graphic model and Deep Learning. 
+            </p>
           </div>
         </div>
         <hr>
@@ -137,24 +149,27 @@
           <div> <a id="#ref"> </a><em> Reference </em></div>
           <div>
             <ul>
+
+              <li>Representation Learning, by Bengio, etc
+                <a href="http://www.cl.uni-heidelberg.de/courses/ws14/deepl/BengioETAL12.pdf">
+                </a>Representation Learning: A Review and New Perspectives</li>
+              </li>
+
               <li>A great tutorial on LSTM, by r2rt 
-                  <a href="http://r2rt.com/written-memories-understanding-deriving-and-extending-the-lstm.html">
-                  Written Memories: Understanding, Deriving and Extending the LSTM </a> </li>
+                <a href="http://r2rt.com/written-memories-understanding-deriving-and-extending-the-lstm.html">
+                Written Memories: Understanding, Deriving and Extending the LSTM </a> </li>
 
               <li>Another tutorial on LSTM with great charts, by colah
-                  <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">
-                  Understanding LSTM Networks</a> </li>
+                <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">
+                Understanding LSTM Networks</a> </li>
 
               <li>Several amazing applications of RNN, by Karpathy 
-                  <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">
-                  The Unreasonable Effectiveness of Recurrent Neural Networks</a> </li>
+                <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">
+                The Unreasonable Effectiveness of Recurrent Neural Networks</a> </li>
 
-              <li>Clear math of CRF, by Michael Collins <a href="http://www.cs.columbia.edu/~mcollins/crf.pdf">
-                  Log-Linear Models, MEMMs, and CRFs</a></li>
-
-              <li>Implementation of Bi-LSTM + CRF model, by me. 
-                  I hope it would help to understand what i have written.
-                  <a href="https://github.com/dongx-duan/crf"> Code</a></li>
+              <li>Clear math of CRF, by Michael Collins 
+                <a href="http://www.cs.columbia.edu/~mcollins/crf.pdf">
+                Log-Linear Models, MEMMs, and CRFs</a></li>
 
             </ul>
           </div>
@@ -164,6 +179,15 @@
 
         <div class="row">
           <div> <a id="#apnd"> </a><em> Appendix </em></div>
+          <div>
+            <ul>
+
+              <li>Implementation of Bi-LSTM + CRF model, by me. 
+                  I hope it would help to understand what i have written.
+                  <a href="https://github.com/dongx-duan/crf"> Code</a></li>
+            
+            </ul>
+          </div>
         </div>
         <hr>
 

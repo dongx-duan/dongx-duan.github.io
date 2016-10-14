@@ -14,7 +14,14 @@
 > Attention on cnn features for image caption
 
 [Effective Approaches to Attention-based Neural Machine Translation](http://stanford.edu/%7Elmthang/data/papers/emnlp15_attn.pdf)
-> Global and Local Attention
+> 1. Comparision of different schemes of Global Attention     
+> dot: `` ht * hs ``    
+> general: `` ht * Wa * hs ``    
+> concatenate: `` vt * tanh(Wa *[ht:hs]) ``    
+>     
+> 2. Local Attention    
+> Hard Attention: As in Show, Attend and Tell    
+> Window selection: for a predict position pt, select [t-D, t+D] to attend on    
 
 [Memory Networks](https://arxiv.org/abs/1410.3916)
 > 

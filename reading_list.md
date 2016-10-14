@@ -22,6 +22,9 @@
 > 2. Local Attention    
 > Hard Attention: As in Show, Attend and Tell    
 > Window selection: for a predict position pt, select [t-D, t+D] to attend on    
+>    
+> 3. Make attention jointly at each time: Input-feeding approach     
+> send the attention h_t to the next input x_t+1
 
 [Memory Networks](https://arxiv.org/abs/1410.3916)
 > 

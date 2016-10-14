@@ -1,7 +1,12 @@
 ## Basics of RNN
-[Batch Normalized Recurrent Neural Networks](https://arxiv.org/abs/1510.01378)
-> Eliminate batch covariance shift of RNN
 
+[Recurrent Batch Normalization](https://arxiv.org/pdf/1603.09025v4.pdf)
+> Covariate shift is a change in distribution of the inputs to a model.   
+> For deep feed-forward neural networks, covariate shift degrades the efficiency of training.   
+> Batch Normalized LSTM:    
+> ``ifog = BN(W*h_t-1) + BN(W*x) + b``    
+> ``c_t = sigmoid(f) * c_t-1 + sigmoid(i) * tanh(g) ``    
+> ``h_t = sigmoid(o) * tanh(BN(c_t)) ``    
 
 ## Encoder-Decoder, Attention and Memory
 [Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation](https://arxiv.org/abs/1406.1078)

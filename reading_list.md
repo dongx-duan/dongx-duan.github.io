@@ -43,6 +43,7 @@
 ## Variational Autoencoder, Variational RNN
 [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114)
 >
+> here is a great blog on VAE https://jmetzen.github.io/2015-11-27/vae.html
 
 [Tutorial on Variational Autoencoders](https://arxiv.org/abs/1606.05908)
 >
